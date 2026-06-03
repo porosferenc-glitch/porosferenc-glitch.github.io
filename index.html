@@ -3,62 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feltöltés alatt</title>
+    <title>Home Assistant</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #ffffff;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #eceff1; /* Világosszürke háttér, jól mutat a logóval */
         }
-        .container {
-            padding: 20px;
-            max-width: 500px;
+        .ha-link img {
+            max-width: 300px; /* A kép szélessége (igény szerint módosíthatod) */
+            height: auto;
+            transition: transform 0.2s; /* Finom animáció rámutatáskor */
         }
-        .gear-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-            animation: spin 4s linear infinite;
-            display: inline-block;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-        p {
-            font-size: 1.1rem;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @media (max-width: 480px) {
-            h1 { font-size: 2rem; }
-            p { font-size: 1rem; }
+        .ha-link img:hover {
+            transform: scale(1.05); /* Kicsit megnő, ha ráviszed az egeret */
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Fogaskerék emoji, ami finoman forog a háttérben -->
-        <div class="gear-icon">⚙️</div>
-        <h1>Feltöltés alatt</h1>
-        <p>A weboldal szerkesztés alatt áll. Kérjük, látogasson vissza később!</p>
-    </div>
+    <!-- A link és a kép összekapcsolása -->
+    <a class="ha-link" href="http://poros.freeddns.org:8123/dashboard-haz/default_view" target="_blank">
+        <img src="https://home-assistant.io" alt="Home Assistant">
+    </a>
 
 </body>
 </html>
