@@ -11,23 +11,32 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #eceff1; /* Világosszürke háttér, jól mutat a logóval */
+            background-color: #03a9f4; /* Home Assistant gyári kék háttér */
+        }
+        .ha-link {
+            display: block;
+            text-align: center;
         }
         .ha-link img {
-            max-width: 300px; /* A kép szélessége (igény szerint módosíthatod) */
+            max-width: 250px; /* A kép szélessége */
             height: auto;
-            transition: transform 0.2s; /* Finom animáció rámutatáskor */
+            border-radius: 20px; /* Lekerekített sarkok a képnek */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Elegáns árnyék a kép alatt */
+            transition: transform 0.2s, box-shadow 0.2s; /* Sima animáció rámutatáskor */
+            background-color: white; /* Fehér háttér a logó mögött, hogy jól látszódjon */
+            padding: 20px;
         }
         .ha-link img:hover {
-            transform: scale(1.05); /* Kicsit megnő, ha ráviszed az egeret */
+            transform: scale(1.08); /* Nagyobbodás ha ráviszed az egeret */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3); /* Erősebb árnyék kiemelésként */
         }
     </style>
 </head>
 <body>
 
-    <!-- A link és a kép összekapcsolása -->
-    <a class="ha-link" href="http://poros.freeddns.org:8123/dashboard-haz/default_view" target="_blank">
-        <img src="https://home-assistant.io" alt="Home Assistant">
+    <!-- Kattintható link a Home Assistant logóval -->
+    <a class="ha-link" href="http://freeddns.org" target="_blank">
+        <img src="https://home-assistant.io" alt="Home Assistant belépés">
     </a>
 
 </body>
